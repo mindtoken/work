@@ -1,0 +1,32 @@
+zsh:
+# color term like 'ls'
+export CLICOLOR='Yes'
+# custom shell prompt
+autoload -U colors && colors
+PROMPT="%{$fg[green]%}%n@%m%{$reset_color%} %{$fg[blue]%}%1~%{$reset_color%} %# "
+
+# self defined aliases
+alias ll='ls -l'
+alias la='ls -a'
+
+
+miniconda:
+安装Python 3.9: https://docs.conda.io/en/latest/miniconda.html
+# sh Miniconda3-py39_4.9.2-MacOSX-x86_64.sh
+设置tsinghua源：https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
+设置pip源：~/.pip/pip.conf
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host=pypi.tuna.tsinghua.edu.cn
+
+Pytorch:
+conda create -n pytorch python=3.9.1
+conda activate pytorch
+pip3 install torch torchvision torchaudio
+
+TensorFlow:
+conda create -n tensorflow python=3.8
+conda activate tensorflow
+pip install tensorflow
+python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
