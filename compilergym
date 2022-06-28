@@ -1,0 +1,2 @@
+conda activate pytorch
+pip3 install compiler_gym==0.2.3
