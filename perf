@@ -1,0 +1,21 @@
+// branch 参考 https://github.com/google/autofdo/blob/master/propeller_optimize_clang.sh
+// 通过cycles事件采样来触发记录LBR
+# perf record -e cycles:u -j any,u -- gcc hello.c
+
+// IPC, Cache, iTLB
+# perf stat -r2 -e instructions,cycles,L1-icache-misses,iTLB-misses -- gcc hello.c
+
+// GCC AutoFDO  
+ocperf.py record -b -e br_inst_retired.near_taken:pp -- ./sort
+
+// LLVM sample profile
+perf record -b ./code
+
+// LLVM CSSPGO
+perf  record  -g  --call-graph  fp  -e  br_inst_retired.near_taken:uppp  -c  16009  -b  -o  test.perf.data  ./test
+
+# Show perf.data with a column for sample count:
+perf report -n
+
+# List all perf.data events, with data header (newer kernels; was previously default):
+perf script --header
