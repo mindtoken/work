@@ -9,3 +9,11 @@ Build:
 # ../gcc-10.3.0/configure --enable-bootstrap --enable-languages=c,c++ --prefix=/home/xxx/gcc/usr --enable-shared --disable-multilib  --with-zstd
 # make -j32
 # make install
+
+
+=====
+Usage
+=====
+gcc  -O2 -c -Q --help=optimizer
+gcc  -fprofile-generate -O3 -c -Q --help=optimizer
+gcc  -O3 -c -Q --help=optimizer
