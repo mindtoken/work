@@ -19,3 +19,7 @@ perf report -n
 
 # List all perf.data events, with data header (newer kernels; was previously default):
 perf script --header
+
+参考：
+https://www.brendangregg.com/perf.html
+https://perf.wiki.kernel.org/index.php/Tutorial
