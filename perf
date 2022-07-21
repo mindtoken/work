@@ -13,6 +13,8 @@ perf record -b ./code
 
 // LLVM CSSPGO
 perf  record  -g  --call-graph  fp  -e  br_inst_retired.near_taken:uppp  -c  16009  -b  -o  test.perf.data  ./test
+perf report --call-graph --stdio -G
+
 
 # Show perf.data with a column for sample count:
 perf report -n
