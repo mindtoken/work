@@ -8,3 +8,5 @@ Build from source
 ==================
 cmake: mac包，需要打开图形界面-tools使能命令行。
 ninja：mac宝。在设置-隐私安全中打开。
+./x.py build  >log.build 2>&1
+
