@@ -6,4 +6,5 @@ https://www.rust-lang.org/tools/install
 
 Build from source
 ==================
-
+cmake: mac包，需要打开图形界面-tools使能命令行。
+ninja：mac宝。在设置-隐私安全中打开。
