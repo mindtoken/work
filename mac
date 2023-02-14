@@ -1,4 +1,15 @@
-zsh:
+bash: 20230214 下面的zsh无法工作，猜测是更新osx版本导致，autoload命令找不到。
+==========
+# color term like 'ls'
+export CLICOLOR='Yes'
+# Set a prompt like: [username@hostname:~/CurrentWorkingDirectory]$
+export PS1='[\u@\h:\w]\$ '
+# self defined aliases
+alias ll='ls -l'
+alias la='ls -a'
+
+zsh: 
+==========
 # color term like 'ls'
 export CLICOLOR='Yes'
 # custom shell prompt
