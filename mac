@@ -20,6 +20,9 @@ PROMPT="%{$fg[green]%}%n@%m%{$reset_color%} %{$fg[blue]%}%1~%{$reset_color%} %# 
 alias ll='ls -l'
 alias la='ls -a'
 
+sys
+===
+sysctl -a | grep machdep.cpu
 
 miniconda:
 ==========
