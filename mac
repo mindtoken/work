@@ -45,3 +45,10 @@ conda create -n tensorflow python=3.8
 conda activate tensorflow
 pip install tensorflow
 python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+
+cmake
+======
+Download: https://cmake.org/download/
+打开cmake，点击菜单栏的Tools -> How to Install For Command Line Use
+$ sudo "/Applications/CMake.app/Contents/bin/cmake-gui" --install
