@@ -12,11 +12,13 @@ cmake -S . -B build -DSEAL_ROOT=/Users/mac/cloud/fhe/usr
 cmake --build build
 
 #Build SEAL with Intel HEXL
-
 ```
-Performance:
+
+## Performance:
+```
 $ cd seal/main/native/examples
 $ ./build/bin/sealexamples
+```
 
 ## Test
 ```
