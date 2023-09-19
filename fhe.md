@@ -27,4 +27,25 @@ $ cmake -S . -B build -DSEAL_ROOT=/Users/mac/cloud/fhe/usr
 $ cmake --build build
 ```
 
-# TenSEAL
+# openfhe
+## Build
+https://openfhe-development.readthedocs.io/en/latest/sphinx_rsts/intro/installation/macos.html
+```
+// Install OpenMP Library: 
+$ brew install libomp
+
+// Install OpenFHE
+$ git clone git@github.com:openfheorg/openfhe-development.git main
+$ mkdir build
+$ cd build 
+$ cmake -DCMAKE_CROSSCOMPILING=1 -DRUN_HAVE_STD_REGEX=0 -DRUN_HAVE_POSIX_REGEX=0 -DCMAKE_INSTALL_PREFIX=/Users/yuanpeng/compiler/usr ../main
+$ make -j8
+$ make install
+$ ./bin/examples/pke/simple-real-numbers
+```
+## Build App
+https://openfhe-development.readthedocs.io/en/latest/sphinx_rsts/intro/building_user_applications.html
+```
+Use CMakeLists.User.txt
+```
+
